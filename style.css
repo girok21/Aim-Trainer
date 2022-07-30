@@ -18,17 +18,16 @@ body{
     padding-top: 100px;
     cursor: pointer;
 }
-#TestScreen img{
-    max-width: 150px;
-    max-height: 150px;
-    margin-bottom: 5px;
-    margin-top: 10px;
+#target{
+    max-width: 113px;
+    max-height: 113px;
 }
+
 #TestScreen h1{
     font-weight: 600;
     font-size: 80px;
-    margin-bottom: 1px;
-    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-top: 5px;
 }
 #TestScreen h2{
     font-weight: 100;
