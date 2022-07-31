@@ -9,18 +9,17 @@ body{
     font-family: 'Archivo', sans-serif;;
     text-align: center;
     display: inline-block;
-    vertical-align: middle;
     color: white;
     margin-left: 0px;
     background-color: rgb(43,135,209);
     height: 65vh;
     width: 100%;
     padding-top: 100px;
-    cursor: pointer;
+    cursor: crosshair;
 }
 #target{
-    max-width: 113px;
-    max-height: 113px;
+    max-width: 114px;
+    max-height: 114px;
 }
 
 #TestScreen h1{
@@ -30,6 +29,11 @@ body{
     margin-top: 5px;
 }
 #TestScreen h2{
+    margin-top: 0px;
+    font-weight: 600;
+    font-size: 60px;
+}
+#TestScreen h3{
     font-weight: 100;
     font-size: 22px;
 }
