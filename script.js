@@ -6,6 +6,7 @@ window.onload = function(){
     scoreText = $("#scoreText");
     RemainingTargets = $("#RemainingTargets");
     retryBtn = $('#retryBtn');
+    retryBtn.hide();
     var minLeftPos = 10;
     var minTopPos = 120;
     var maxLeftPos = TestScreen.width() - 125;
@@ -15,6 +16,17 @@ window.onload = function(){
     var prevTime = 0;
     var reactionTime = 0;
     var remainingClicks = 20;
+    retryBtn.click(function(){
+        retryBtn.hide();
+        majorText.text("Aim Trainer");
+        secondaryText.html(`Hit 20 targets as quickly as you can<br style='display: block; content: "";margin-top: 12px'>Click the target above to begin`);
+        scoreText.text('');
+        isFirstClick = true;
+        totalTime = 0;
+        prevTime = 0;
+        reactionTime = 0;
+        remainingClicks = 20;
+    })
     target.click(function(){
         reactionTime = Date.now();
         if(remainingClicks == 0)
@@ -24,6 +36,7 @@ window.onload = function(){
             secondaryText.text("Average time per target");
             RemainingTargets.text('');
             scoreText.text(Math.round((totalTime-10)/20) + " ms");
+            retryBtn.show();
             return;
         }
         var leftPos = minLeftPos + Math.random()*(maxLeftPos-minLeftPos);//min 10px and max 
